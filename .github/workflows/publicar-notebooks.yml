@@ -2,7 +2,12 @@ name: Publicar Markdown en GitHub Pages
 
 on:
   push:
+    branches:
+      - main   # O la rama principal que uses
   workflow_dispatch:
+
+permissions:
+  contents: write   # Permite hacer push desde GitHub Actions
 
 jobs:
   publicar:
@@ -13,17 +18,17 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Instalar Pandoc
-        run: sudo apt-get install -y pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
 
       - name: Convertir Markdown a HTML
         run: |
+          echo "📢 Convirtiendo Markdown a HTML..."
           for md in $(find . -type f -name "*.md"); do
-            echo "📢 Publicando $md ..."
+            echo "  - Procesando $md ..."
             out="site/${md%.md}.html"
-            mkdir -p "$(dirname "$out")"   # Crear subdirectorios necesarios
+            mkdir -p "$(dirname "$out")"
             pandoc "$md" -f markdown -t html -s -o "$out"
           done
-
 
       - name: Configurar Git
         run: |
@@ -31,11 +36,10 @@ jobs:
           git config --global user.email "actions@github.com"
 
       - name: Publicar en gh-pages
-        env:
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git checkout --orphan gh-pages
+          git fetch origin
+          git checkout --orphan gh-pages || git checkout gh-pages
           git --work-tree=site add --all
-          git --work-tree=site commit -m "Publicar Markdown como HTML"
-          git push --force https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git gh-pages
+          git --work-tree=site commit -m "Publicar Markdown como HTML" || echo "No hay cambios para commitear"
+          git push --force origin gh-pages
 
