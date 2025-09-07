@@ -3,11 +3,11 @@ name: Publicar Markdown en GitHub Pages
 on:
   push:
     branches:
-      - main   # O la rama principal que uses
+      - main
   workflow_dispatch:
 
 permissions:
-  contents: write   # Permite hacer push desde GitHub Actions
+  contents: write
 
 jobs:
   publicar:
@@ -42,4 +42,13 @@ jobs:
           git --work-tree=site add --all
           git --work-tree=site commit -m "Publicar Markdown como HTML" || echo "No hay cambios para commitear"
           git push --force origin gh-pages
+
+      - name: Actualizar README con enlace
+        run: |
+          PAGE_URL="https://donmatthiuz.github.io/apuntes_ejemplo/apunte.html"
+          echo "📢 Actualizando README.md con el enlace a la página..."
+          echo "[Ver apunte en GitHub Pages]($PAGE_URL)" > README.md
+          git add README.md
+          git commit -m "Actualizar README con enlace a GitHub Pages" || echo "No hay cambios en README"
+          git push origin main
 
