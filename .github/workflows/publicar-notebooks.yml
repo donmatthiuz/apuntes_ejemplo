@@ -1,54 +1,40 @@
-name: Publicar Markdown en GitHub Pages
+name: Publicar Markdown
 
 on:
   push:
-    branches:
-      - main
   workflow_dispatch:
-
-permissions:
-  contents: write
 
 jobs:
   publicar:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Clonar el repositorio
       - name: Checkout del repo
         uses: actions/checkout@v3
 
+      # 2️⃣ Instalar Pandoc
       - name: Instalar Pandoc
         run: sudo apt-get update && sudo apt-get install -y pandoc
 
+      # 3️⃣ Convertir todos los Markdown a HTML
       - name: Convertir Markdown a HTML
         run: |
           echo "📢 Convirtiendo Markdown a HTML..."
           for md in $(find . -type f -name "*.md"); do
             echo "  - Procesando $md ..."
-            out="site/${md%.md}.html"
-            mkdir -p "$(dirname "$out")"
-            pandoc "$md" -f markdown -t html -s -o "$out"
+            html="${md%.md}.html"
+            pandoc "$md" -f markdown -t html -s -o "$html"
           done
 
-      - name: Configurar Git
+      # 4️⃣ Hacer commit y push de los HTML generados en la misma rama
+      - name: Commit y push
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
-
-      - name: Publicar en gh-pages
-        run: |
-          git fetch origin
-          git checkout --orphan gh-pages || git checkout gh-pages
-          git --work-tree=site add --all
-          git --work-tree=site commit -m "Publicar Markdown como HTML" || echo "No hay cambios para commitear"
-          git push --force origin gh-pages
-
-      - name: Actualizar README con enlace
-        run: |
-          PAGE_URL="https://donmatthiuz.github.io/apuntes_ejemplo/apunte.html"
-          echo "📢 Actualizando README.md con el enlace a la página..."
-          echo "[Ver apunte en GitHub Pages]($PAGE_URL)" > README.md
-          git add README.md
-          git commit -m "Actualizar README con enlace a GitHub Pages" || echo "No hay cambios en README"
-          git push origin main
+          git add *.html || true
+          git commit -m "Publicar Markdown convertidos a HTML" || echo "Sin cambios"
+          git push https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git HEAD
 
