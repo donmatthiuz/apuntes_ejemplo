@@ -165,3 +165,22 @@ En el texto se menciona que ciertos aspectos de una red neuronal, como el aprend
 Se enfatiza la importancia de tener un objetivo claro al entrenar una red neuronal, que consiste en lograr que la red aprenda y que sea capaz de procesar correctamente los datos de entrada. Se menciona también la limitación de recursos como un desafío, y se explica la función de un batch en el proceso de actualización de pesos durante el entrenamiento.
 
 En resumen, se plantea la necesidad de crear una red neuronal y realizar pruebas con diferentes combinaciones
+# 2025-09-23
+
+## Introducción
+En este texto se discute la importancia de los hiperparámetros en el entrenamiento de una red neuronal, así como su impacto en el proceso de aprendizaje y la configuración de la red.
+
+## Definición de Hiperparámetros
+Los hiperparámetros son variables que no se modifican durante el entrenamiento de una red neuronal, pero que influyen en su rendimiento y capacidad de aprendizaje. Algunos ejemplos de hiperparámetros son la cantidad de capas, el learning rate de la función de activación, el batch size y las épocas.
+
+## Importancia de los Hiperparámetros
+Estos hiperparámetros son cruciales para el buen funcionamiento de la red neuronal, ya que determinan cómo se llevará a cabo el proceso de entrenamiento y qué tan eficiente será el aprendizaje. Es fundamental seleccionar los valores adecuados para cada hiperparámetro con el fin de optimizar el rendimiento de la red.
+
+## Proceso de Entrenamiento
+Durante el entrenamiento de la red, se utiliza un conjunto de datos para ajustar los pesos de la red a medida que se realizan observaciones. Esto se hace a través de un proceso de actualización de los pesos en función de las predicciones y los errores cometidos.
+
+## Creación de una Red Neuronal
+La tarea principal es crear una red neuronal que sea capaz de aprender de manera efectiva. Para lograr esto, es necesario probar diferentes combinaciones de hiperparámetros y ajustarlos según los resultados obtenidos en el entrenamiento de la red.
+
+## Conclusiones
+En resumen, los hiperparámetros juegan un papel fundamental en el proceso de entrenamiento de una red neuronal, y su correcta configuración puede marcar la diferencia entre un modelo eficaz y uno que no cumple con las expectativas. Es crucial comprender cómo afectan estos hiperparámetros al rendimiento de la red para poder diseñar modelos de aprendizaje profundo más efectivos.
