@@ -67,3 +67,25 @@ El texto plantea que la tarea a futuro será la creación de una red neuronal, d
 Es fundamental comprender la importancia de los hiperparámetros en el diseño y entrenamiento de redes neuronales, ya que estos juegan un papel crucial en el desempeño y la capacidad de aprendizaje de la red.
 
 En resumen, el texto destaca la relevancia de los hiperparámetros en el proceso de entrenamiento de una red neuronal, subrayando la necesidad de experimentar con diferentes configuraciones para optimizar su rendimiento.
+# 2025-09-23: Anotaciones sobre Redes Neuronales
+
+## Introducción
+En esta sesión se ha discutido acerca de la importancia de los hiperparámetros en el entrenamiento de redes neuronales. Los hiperparámetros son variables que influyen en el proceso de aprendizaje de la red y que deben ser ajustados de manera adecuada para lograr un buen rendimiento.
+
+## Hiperparámetros en Redes Neuronales
+Los hiperparámetros de una red neuronal pueden incluir la cantidad de capas, el learning rate de la función de activación, el batch size y las épocas. Estos parámetros son cruciales para determinar cómo la red aprenderá a partir de los datos de entrenamiento.
+
+### Cantidad de Capas
+La cantidad de capas en una red neuronal es un hiperparámetro fundamental que afecta la capacidad de la red para aprender y generalizar patrones en los datos. Ajustar este parámetro correctamente puede mejorar significativamente el desempeño de la red.
+
+### Learning Rate
+El learning rate, o tasa de aprendizaje, determina qué tan rápido la red neuronal ajusta sus pesos durante el entrenamiento. Es importante encontrar un valor adecuado para el learning rate, ya que valores muy altos pueden llevar a oscilaciones en el entrenamiento y valores muy bajos pueden provocar que la red converja lentamente.
+
+### Batch Size
+El batch size se refiere al número de ejemplos de entrenamiento que se utilizan en cada iteración durante el proceso de entrenamiento de la red. Elegir un batch size apropiado puede influir en la velocidad de convergencia y la estabilidad del entrenamiento.
+
+### Épocas
+Las épocas representan la cantidad de veces que el conjunto de entrenamiento completo se ha pasado a través de la red neuronal durante el entrenamiento. El número de épocas puede afectar la capacidad de la red para generalizar a nuevos datos.
+
+## Conclusiones
+En resumen, la elección adecuada de los hiperparámetros es crucial para el éxito de un modelo de red neuronal. Es importante experimentar con diferentes valores de hiperparámetros y ajustarlos de manera adecuada para lograr un buen rendimiento en la tarea de aprendiz
