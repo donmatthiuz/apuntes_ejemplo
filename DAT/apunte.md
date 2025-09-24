@@ -128,3 +128,21 @@ El objetivo principal es lograr que la red neuronal aprenda de manera eficiente 
 
 ## Conclusiones
 
+# 2025-09-23
+
+## Introducción
+En este fragmento de audio se discute sobre los conceptos relacionados con el ajuste de hiperparámetros en redes neuronales. Se abordan temas como la importancia de ciertos parámetros en el entrenamiento de la red y cómo afectan al proceso de aprendizaje.
+
+## Resultado de la Herramienta de Llamada
+El contenido del audio analizado muestra que para Metro es lo que no podemos modificar, se guarda en el aprendizaje. Se menciona que el secado de cuenta mientras se prende y el parámetro les ve que lo podemos modificar. Se destaca la importancia de variables que pueden influir en el entrenamiento de la red, como la cantidad de capas, el learning rate, la función de activación, el batch size y las épocas.
+
+## Hiperparámetros en Redes Neuronales
+Los hiperparámetros de una red neuronal son elementos clave que afectan su rendimiento y capacidad de aprendizaje. En este contexto, se mencionan aspectos como la arquitectura de la red (cantidad de capas), la velocidad de aprendizaje (learning rate), la función de activación utilizada, el tamaño del lote de datos de entrenamiento (batch size) y el número de épocas de entrenamiento. Estos hiperparámetros son críticos para lograr un buen desempeño en el proceso de entrenamiento de la red.
+
+## Desafíos y Objetivos
+Se plantea el desafío de la limitación de recursos en el proceso de entrenamiento de la red neuronal. Se destaca la importancia de actualizar los pesos de la red en función de las observaciones realizadas en cada iteración del entrenamiento. Se menciona la necesidad de establecer objetivos claros para que la red neuronal pueda aprender de manera efectiva y procesar la información de los datos de entrada.
+
+## Tareas Futuras
+Se plantea como tarea futura la creación de una red neuronal y la exploración de diferentes combinaciones de hiperparámetros para optimizar su rendimiento. Este proceso de ajuste de hiperparámetros permitirá mejorar la capacidad de aprendizaje y generalización de la red neuronal.
+
+En resumen, el ajuste adecu
