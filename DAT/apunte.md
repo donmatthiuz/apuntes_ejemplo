@@ -108,3 +108,23 @@ El texto plantea la creación de una red neuronal como tarea futura, donde se de
 
 ## Conclusiones
 La comprensión y correcta elección de los hiperparámetros en el entrenamiento de redes neuronales son aspectos cruciales para obtener resultados satisfactorios en la tarea de aprendizaje automático. Experimentar con diferentes
+# 2025-09-23
+
+## Introducción
+En este documento se discutirá acerca de los hiperparámetros en una red neuronal y su importancia en el proceso de entrenamiento. Se analizará cómo estos hiperparámetros afectan el aprendizaje de la red y la optimización de los pesos.
+
+## Resultado de la Herramienta de Llamadas
+El resultado obtenido de la herramienta de llamadas muestra la importancia de ciertos hiperparámetros en el proceso de entrenamiento de una red neuronal. Se destaca la relevancia de parámetros como la cantidad de capas, el learning rate, la función de activación, el batch size y las épocas en el desarrollo de la red.
+
+## Análisis de los Hiperparámetros
+- **Cantidad de Capas**: La cantidad de capas en una red neuronal influye en su capacidad de aprendizaje y en la complejidad de los patrones que puede identificar.
+- **Learning Rate**: Esta tasa determina cuánto se ajustan los pesos de la red en cada iteración durante el entrenamiento. Un learning rate adecuado es crucial para un buen rendimiento.
+- **Función de Activación**: La función de activación define cómo se comporta cada neurona en la red. Elegir la función adecuada es esencial para el aprendizaje óptimo.
+- **Batch Size**: El batch size indica cuántos ejemplos de datos se procesan en cada iteración. Un tamaño de batch adecuado puede acelerar el entrenamiento.
+- **Épocas**: Las épocas representan el número de veces que el algoritmo de entrenamiento recorre todo el conjunto de datos. Determinar el número adecuado de épocas es importante para evitar el sobreajuste o subajuste.
+
+## Objetivos y Tareas Futuras
+El objetivo principal es lograr que la red neuronal aprenda de manera eficiente y efectiva, teniendo en cuenta la influencia de los hiperparámetros en este proceso. Es necesario definir un objetivo claro y trabajar en la creación de la red neuronal, realizando pruebas con diferentes configuraciones de hiperparámetros para encontrar la combinación óptima que maximice el rendimiento del modelo.
+
+## Conclusiones
+
