@@ -146,3 +146,22 @@ Se plantea el desafío de la limitación de recursos en el proceso de entrenamie
 Se plantea como tarea futura la creación de una red neuronal y la exploración de diferentes combinaciones de hiperparámetros para optimizar su rendimiento. Este proceso de ajuste de hiperparámetros permitirá mejorar la capacidad de aprendizaje y generalización de la red neuronal.
 
 En resumen, el ajuste adecu
+# 2025-09-23
+
+## Introducción
+El siguiente texto es una transcripción de un audio que aborda conceptos relacionados con el entrenamiento de redes neuronales y la importancia de los hiperparámetros en dicho proceso.
+
+## Contenido
+
+### Resultado de CallTool
+El resultado obtenido a través de CallTool es el siguiente:
+```
+Para Metro es lo que no podemos modificar, se guarda en el aprendizaje, el seco de cuenta mientras se prende y parámetro les ve que lo podemos modificar. Es una variable que puede tomar por sentado una parte del entrenamiento y la usa para entrenar. Los hiperparámetros de nuestra red pueden ser la cantidad de capas, el learning de la función de activación, el batch size y las épocas. Lo que queremos hacer es tener un objetivo, es hacer que la red aprenda y que cuente el proceso de nuestra data. El problema es solo recursos, entonces tenemos un batch que tiene un conjunto de setorginas y cada vez que te pase en observaciones actualizará los datos correspondientes a los pesos. Sabiendo esto, la tarea de día de mañana será crear una red neuronal y en base a eso ir probando cada uno de los hiperparámetros.
+```
+
+### Explicación
+En el texto se menciona que ciertos aspectos de una red neuronal, como el aprendizaje y ciertos parámetros, no pueden ser modificados, ya que se guardan en el proceso de aprendizaje. Además, se destacan los hiperparámetros clave de una red, como la cantidad de capas, el learning rate de la función de activación, el tamaño del batch y las épocas. Estos hiperparámetros son fundamentales para el entrenamiento de la red y afectan directamente su rendimiento.
+
+Se enfatiza la importancia de tener un objetivo claro al entrenar una red neuronal, que consiste en lograr que la red aprenda y que sea capaz de procesar correctamente los datos de entrada. Se menciona también la limitación de recursos como un desafío, y se explica la función de un batch en el proceso de actualización de pesos durante el entrenamiento.
+
+En resumen, se plantea la necesidad de crear una red neuronal y realizar pruebas con diferentes combinaciones
